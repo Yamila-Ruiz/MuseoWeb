@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PENDIENTE: describe tu Museo Web de la Evolución Gráfica." />
+    <meta name="description" content="Esta página nos sirve para adentrarnos un poco al mundo de la Graficación, repasaremos cinco momentos históricos que marcaron el camino de este arte, visualizaremos una aplicación real a la que estamos acostumbrados a usar, a así como analizaremos algunas cuestiones matemáticas convirtiendo valores RGB a HSV para analizar estos datos, un algoritmo para dejar de lado los cálculos a mano y un glosario con algunas palabras que pueden ayudarnos a adentrarnos a este mundo, así como las conclusiones que puedo compartir." />
     <link rel="stylesheet" href="./styles.css" />
     <title>Museo Web. Graficación.</title>
   </head>
@@ -11,6 +11,11 @@
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header>
       <nav aria-label="Navegación principal"><a href="#evolucion">Evolución</a><a href="#aplicacion">Aplicación</a><a href="#laboratorio">Color</a><a href="#algoritmo">Algoritmo</a><a href="#conclusion">Conclusión</a><a href="#fuentes">Fuentes</a></nav>
+      <div class="buscador">
+ 	 <label for="buscar">Buscar en la página</label>
+  	<input type="search" id="buscar" placeholder="Escribe una palabra..." autocomplete="off">
+ 	 <span id="buscar-resultados" aria-live="polite"></span>
+</div>
     </header>
     <main id="contenido">
       <section class="hero"><h1>Una introducción a la Graficación.</h1><p>La graficación es el arte de convertir datos abstractos o formas geométricas. En figuras visibles. En pantallas, nos permite generar imágenes digitales desde cero mediante el uso de modelos matemáticos y algoritmos para calcular la luz, las sombras y texturas para sentir más real aquello que observamos en nuestros dispositivos digitales o electrónicos, así como esta página web.</p><p>Por: Yamila Ruiz Nava</p></section>
@@ -340,7 +345,7 @@ function convertRGBtoHSV(r, g, b) {
 
   <p>Al recorrer los cinco momentos de la evolución, entendí que cada avance nació de un problema del anterior. Los monitores CRT y el sistema SAGE permitieron ver datos como imágenes, pero eran estáticas y de pocos trazos. El Sketchpad de Ivan Sutherland hizo posible dibujar de forma interactiva y dio origen al diseño asistido por computadora (CAD). Los gráficos vectoriales, nítidos al escalar, no lograban degradados ni texturas, y por eso llegaron los gráficos rasterizados. Las exigencias de los programas CAD y de los videojuegos llevaron a la creación de la GPU con sus miles de núcleos. Finalmente, Canvas y WebGL llevaron los gráficos al navegador sin necesidad de plugins. Todo esto lo pude ver aplicado en una aplicación real, Google Maps, que transforma datos en una representación visual que el usuario puede interpretar para tomar decisiones y quedé sorprendida por las grandes cosas que se pueden logar con tanta evolución..</p>
 
-  <p>En el laboratorio de color comprobé que mis intuiciones no siempre eran correctas. Cuando los tres canales RGB tienen el mismo valor, el resultado no es un marrón como yo esperaba, sino un gris, porque delta vale 0 y la saturación cae al 0%. Con RGB (128, 64, 64) vi cómo un rojo pierde pureza cuando sus canales se acercan. También noté que HSV y HSL no describen el brillo de la misma forma, ya que el Valor y la Luminosidad de mis muestras variaron en más de 10 puntos porcentuales. Esos mismos conceptos (normalización, máximo, mínimo y delta) los llevé a un algoritmo que convierte un color de RGB a HSV, y eso me mostró que la teoría del color puede traducirse directamente en código. En resumen la Graficación por computadora es la unión de hardware, matemáticas y software.</p>
+  <p>En el laboratorio de color comprobé que mis intuiciones no siempre eran correctas. Cuando los tres canales RGB tienen el mismo valor, el resultado no es un marrón como yo esperaba, sino un gris, porque Delta vale 0 y la saturación cae al 0%. Con RGB (128, 64, 64) vi cómo un rojo pierde pureza cuando sus canales se acercan. También noté que HSV y HSL no describen el brillo de la misma forma, ya que el Valor y la Luminosidad de mis muestras variaron en más de 10 puntos porcentuales. Esos mismos conceptos (normalización, máximo, mínimo y delta) los llevé a un algoritmo que convierte un color de RGB a HSV, y eso me mostró que la teoría del color puede traducirse directamente en código. En resumen la Graficación por computadora es la unión de hardware, matemáticas y software.</p>
 
 </section>
       <section id="fuentes">
@@ -439,6 +444,124 @@ function convertRGBtoHSV(r, g, b) {
       if (btnCerrar) btnCerrar.addEventListener("click", () => visor.close());
       visor.addEventListener("click", (e) => {
         if (e.target === visor) visor.close();
+      });
+    }
+    const inputBuscar = document.getElementById("buscar");
+    const infoBuscar = document.getElementById("buscar-resultados");
+    const zonaBusqueda = document.querySelector("main");
+
+    let coincidencias = [];
+    let indice = -1;
+    let ultimoTermino = "";
+
+    function limpiarResaltado() {
+      zonaBusqueda.querySelectorAll("mark.resaltado").forEach((m) => {
+        m.replaceWith(document.createTextNode(m.textContent));
+      });
+      zonaBusqueda.normalize();
+    }
+
+    function sinAcentos(t) {
+      return t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    // Va a la coincidencia número i (da la vuelta al llegar al final)
+    function irA(i) {
+      if (indice >= 0 && coincidencias[indice]) {
+        coincidencias[indice].classList.remove("actual");
+      }
+      indice = (i + coincidencias.length) % coincidencias.length;
+      const marca = coincidencias[indice];
+      marca.classList.add("actual");
+      marca.scrollIntoView({ behavior: "smooth", block: "center" });
+      infoBuscar.textContent = `${indice + 1} de ${coincidencias.length}`;
+    }
+
+    function resaltar(termino) {
+      limpiarResaltado();
+      coincidencias = [];
+      indice = -1;
+      infoBuscar.textContent = "";
+
+      const buscado = sinAcentos(termino.trim());
+      if (buscado.length < 2) return;
+
+      const recorrido = document.createTreeWalker(zonaBusqueda, NodeFilter.SHOW_TEXT, {
+        acceptNode(nodo) {
+          const padre = nodo.parentElement;
+          if (!padre || padre.closest("script, style, pre, mark")) return NodeFilter.FILTER_REJECT;
+          return nodo.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        },
+      });
+
+      const nodos = [];
+      while (recorrido.nextNode()) nodos.push(recorrido.currentNode);
+
+      nodos.forEach((nodo) => {
+        const texto = nodo.nodeValue;
+        const plano = sinAcentos(texto);
+        let desde = 0;
+        let pos = plano.indexOf(buscado, desde);
+        if (pos === -1) return;
+
+        const fragmento = document.createDocumentFragment();
+        while (pos !== -1) {
+          fragmento.append(texto.slice(desde, pos));
+          const mark = document.createElement("mark");
+          mark.className = "resaltado";
+          mark.textContent = texto.slice(pos, pos + buscado.length);
+          fragmento.append(mark);
+          desde = pos + buscado.length;
+          pos = plano.indexOf(buscado, desde);
+        }
+        fragmento.append(texto.slice(desde));
+        nodo.replaceWith(fragmento);
+      });
+      coincidencias = Array.from(zonaBusqueda.querySelectorAll("mark.resaltado"))
+        .filter((m) => m.offsetParent !== null);
+
+      if (coincidencias.length === 0) {
+        infoBuscar.textContent = "Sin resultados";
+        return;
+      }
+      irA(0);
+    }
+
+function reiniciarBusqueda() {
+      limpiarResaltado();
+      coincidencias = [];
+      indice = -1;
+      ultimoTermino = "";
+      infoBuscar.textContent = "";
+    }
+    if (inputBuscar && zonaBusqueda) {
+      // Al borrar todo el texto, se quitan resaltados y el contador
+      inputBuscar.addEventListener("input", () => {
+        if (inputBuscar.value.trim() === "") reiniciarBusqueda();
+      });
+
+      // También cubre la "x" nativa que aparece en los campos type="search"
+      inputBuscar.addEventListener("search", () => {
+        if (inputBuscar.value.trim() === "") reiniciarBusqueda();
+      });
+
+      inputBuscar.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter") return;
+        e.preventDefault();
+
+        const termino = inputBuscar.value.trim();
+
+        if (termino === "") {
+          reiniciarBusqueda();
+          return;
+        }
+
+        if (termino === ultimoTermino && coincidencias.length) {
+          irA(e.shiftKey ? indice - 1 : indice + 1);
+        } else {
+          ultimoTermino = termino;
+          resaltar(termino);
+        }
       });
     }
   });
