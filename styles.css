@@ -108,7 +108,7 @@ main > section:not(.hero) h2::before {
   text-transform: uppercase;
   color: var(--bronce);
 }
-#conclusion h2::before { content: "Epílogo"; }
+#conclusion h2::before { content: "Cierre"; }
 #fuentes h2::before { content: "Archivo"; }
 h2::after {
   content: "";
