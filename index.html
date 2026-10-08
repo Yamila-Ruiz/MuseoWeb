@@ -5,23 +5,443 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="PENDIENTE: describe tu Museo Web de la Evolución Gráfica." />
     <link rel="stylesheet" href="./styles.css" />
-    <title>PENDIENTE · Museo Web de la Evolución Gráfica</title>
+    <title>Una introducción a la Graficación.</title>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header>
-      <nav aria-label="Navegación principal"><a href="#evolucion">Evolución</a><a href="#aplicacion">Aplicación</a><a href="#laboratorio">Color</a><a href="#algoritmo">Algoritmo</a><a href="#fuentes">Fuentes</a></nav>
+      <nav aria-label="Navegación principal"><a href="#evolucion">Evolución</a><a href="#aplicacion">Aplicación</a><a href="#laboratorio">Color</a><a href="#algoritmo">Algoritmo</a><a href="#conclusion">Conclusión</a><a href="#fuentes">Fuentes</a></nav>
     </header>
     <main id="contenido">
-      <section class="hero"><h1>PENDIENTE: título propio</h1><p>PENDIENTE: definición de graficación por computadora con tus palabras.</p><p>Autor: PENDIENTE</p></section>
-      <section id="evolucion"><h2>Cinco momentos de la evolución</h2><p class="instructions">Duplica el artículo hasta tener cinco. Reemplaza cada PENDIENTE con investigación propia.</p><article><h3>PENDIENTE: nombre del momento</h3><p><strong>Limitación anterior:</strong> PENDIENTE</p><p><strong>Cambio:</strong> PENDIENTE</p><p><strong>Impacto:</strong> PENDIENTE</p><p><strong>Ejemplo actual:</strong> PENDIENTE</p><!-- Agrega una imagen local con width, height, alt honesto y crédito. --></article></section>
-      <section id="aplicacion"><h2>Una aplicación real</h2><p>PENDIENTE: usuario → problema → datos → representación → decisión.</p></section>
-      <section id="laboratorio"><h2>Laboratorio de color</h2><p class="instructions">Crea tres registros: predicción, RGB, CMY, HSV, HSL, máximo, mínimo, delta y conclusión.</p><article><h3>PENDIENTE: experimento</h3><p><strong>Predicción:</strong> PENDIENTE</p><p><strong>Datos:</strong> PENDIENTE</p><p><strong>Conclusión basada en valores:</strong> PENDIENTE</p></article></section>
-      <section id="algoritmo"><h2>De la fórmula al algoritmo</h2><p>PENDIENTE: explica normalización, máximo, mínimo, delta y el caso acromático.</p><pre><code>// PENDIENTE: pega tu función probada y explícala.</code></pre></section>
-      <section id="glosario"><h2>Glosario</h2><p>PENDIENTE: al menos diez términos explicados con palabras propias y un ejemplo.</p></section>
-      <section id="conclusion"><h2>Conclusión</h2><p>Antes pensaba que PENDIENTE. La evidencia PENDIENTE cambió mi idea porque PENDIENTE.</p></section>
-      <section id="fuentes"><h2>Fuentes y créditos</h2><ol><li>PENDIENTE: autor, título, institución o sitio, URL y fecha de consulta.</li></ol></section>
+      <section class="hero"><h1>Una introducción a la Graficación.</h1><p>La graficación es el arte de convertir datos abstractos o formas geométricas. En figuras visibles. En pantallas, nos permite generar imágenes digitales desde cero mediante el uso de modelos matemáticos y algoritmos para calcular la luz, las sombras y texturas para sentir más real aquello que observamos en nuestros dispositivos digitales o electrónicos, así como esta página web.</p><p>Por: Yamila Ruiz Nava</p></section>
+      <section id="evolucion">
+<p> Comencemos a navegar en este mundo tan completo con algunos antecedentes...
+	<h2>Cinco momentos de la evolución</h2>
+	<div class="carrusel" aria-label="Galería de la evolución gráfica"><div class="carrusel" aria-label="Galería de la evolución gráfica">
+  <!-- DIAPOSITIVA 1 -->
+  <div class="slide">
+    	<h4 class="slide-titulo">Entonces, si antes no existían colores en los monitores, ¿cómo se observaban imágenes?</h4>
+        <figure>
+      		<img src="img/Chica_PinUp.png" width="800" height="500" alt="Silueta digital de una chica Pin-Up generada con el sistema SAGE">
+      		<figcaption>Fig. 1. Primera imagen figurativa digital, recreación de chica Pin-Up a finales de los años 50. (Villagrán, 2016)</figcaption>
+    </figure>
+	<h3>Los primeros gráficos: CRT y SAGE</h3>
+ 	 <p><strong>Limitación anterior:</strong> Las computadoras entregaban sus resultados solo como texto y números, sin ninguna forma de verlos como imagen.</p>
+ 	 <p><strong>Cambio:</strong> Los monitores CRT permitieron dibujar formas con trazos de luz, y sistemas como SAGE (MIT, 1955) las usaron para mostrar datos de radar en pantalla.</p>
+  	<p><strong>Impacto:</strong> Por primera vez la información se podía ver y no solo leer, lo que abrió el camino a la visualización de datos y a las primeras imágenes figurativas hechas con ordenador.</p>
+  	<p><strong>Ejemplo actual:</strong> Las pantallas de radar y de control de tráfico aéreo, que siguen mostrando información en tiempo real.</p>
+  </div>
+
+  <!-- DIAPOSITIVA 2 -->
+  <div class="slide" hidden>
+    <h4 class="slide-titulo">Quien diría que observar a los padres sería una inspiración…</h4>
+    <figure>
+      <img src="img/Sketchpad.png" width="800" height="500" alt="Fotogramas del Sketchpad mostrando cómo el programa ajusta dibujos con restricciones">
+      <figcaption>Fig. 2. Fotogramas del video de demostración del Sketchpad que ilustran el uso de las restricciones en el programa. Fila superior: El usuario selecciona partes de un dibujo. Fila inferior: Sketchpad ajusta los dibujos automáticamente. (Villagrán)</figcaption>
+    </figure>
+	<h3>Sketchpad y el diseño asistido por ordenador</h3>
+ 	 <p><strong>Limitación anterior:</strong> Los usuarios no podían dibujar directamente en el ordenador, solo darle instrucciones.</p>
+ 	 <p><strong>Cambio:</strong> En 1963, Ivan Sutherland creó Sketchpad, que con un lápiz óptico permitía trazar formas lineales directamente sobre la pantalla.</p>
+  	<p><strong>Impacto:</strong> Dio inicio a los programas de diseño asistido por ordenador (CAD) y a la idea de interactuar con la computadora de forma gráfica.</p>
+  	<p><strong>Ejemplo actual:</strong> Programas CAD como AutoCAD o SolidWorks, y las tabletas gráficas con lápiz digital.</p>
+  </div>
+
+  <!-- DIAPOSITIVA 3 -->
+  <div class="slide" hidden>
+    <h4 class="slide-titulo">Pensemos en los inicios…los gráficos vectoriales surgieron como un revolución para representar imágenes mediante expresiones matemáticas en lugar de píxeles, pero ¿qué limitaciones tenían?</h4>
+         <figure>
+       <img src="img/Imagen_Raster.png" width="800" height="500" alt="Imagen de cómo se observan los píxeles de cerca en una imagen rasterizada">
+      <figcaption>Fig. 3. Los píxeles de una imagen rasterizada son visibles cuando se acerca. (Montana, 2022).</figcaption>
+    </figure>
+ 	<h3>De los gráficos vectoriales al ráster</h3>
+  	<p><strong>Limitación anterior:</strong> Los gráficos vectoriales, definidos por fórmulas matemáticas, no lograban degradados de color, texturas ni sombreados complejos.</p>
+ 	 <p><strong>Cambio:</strong> Surgieron los gráficos rasterizados, formados por una cuadrícula de píxeles con un color en cada uno.</p>
+  	<p><strong>Impacto:</strong> Hicieron posible la fotografía digital y la representación realista, aunque al cambiar su escala pierden nitidez.</p>
+  	<p><strong>Ejemplo actual:</strong> Las fotografías digitales en formatos como JPG o PNG; los gráficos vectoriales se siguen usando en logotipos e ilustraciones.</p>
+  </div>
+
+  <!-- DIAPOSITIVA 4 -->
+  <div class="slide" hidden>
+	<h4 class="slide-titulo">Tal como hemos visto, las máquinas fueron evolucionando, los programas CAD y videojuegos exigían más recursos, aunque se idearon soluciones, como el FPU, con el tiempo seguían sin cumplir con los requisitos, convirtiéndolos en el punto de partida para el nacimiento de las GPU…</h4>
+    <figure>
+       <img src="img/RTX-5090.png" width="800" height="500" alt="GPU RTX5090 NVIDIA">
+      <figcaption>Fig. 4. Tarjeta gráfica NVIDIA GeForce RTX 5090 (NVIDIA, 2026).</figcaption>
+    </figure>
+	<h3>El nacimiento de la GPU</h3>
+  	<p><strong>Limitación anterior:</strong> Los programas CAD y los videojuegos exigían más recursos de los que el procesador y la unidad de punto flotante (FPU) podían ofrecer.</p>
+  	<p><strong>Cambio:</strong> En 1999 NVIDIA introdujo el concepto de GPU, un procesador con cientos o miles de núcleos dedicado a la información gráfica.</p>
+ 	 <p><strong>Impacto:</strong> Permitió procesar enormes volúmenes de datos con baja latencia, lo que hizo posibles los juegos en alta resolución y con respuesta casi instantánea.</p>
+  	<p><strong>Ejemplo actual:</strong> La NVIDIA GeForce RTX 5090, con 21,760 núcleos CUDA, que ejecuta juegos en 4K a altas tasas de refresco.</p>
+</div>
+
+  <!-- DIAPOSITIVA 5 -->
+  <div class="slide" hidden>
+	<h4 class="slide-titulo">Es evidente que nos fuimos muy adelante con la gráfica anterior, regresemos un poco al pasado…</h4>
+     <figure>
+       <img src="img/Contra_webGL.png" width="800" height="500" alt="Página creada con WebGL, Contra.">
+      <figcaption>Fig. 5. Sitio web Contra, herramienta web interactiva que sirve para ayudar a las empresas a optimizar sus presupuestos de contratación (Unseen Studio, 2024).</figcaption>
+    </figure>
+	<h3>Gráficos en el navegador: Canvas y WebGL</h3>
+  	<p><strong>Limitación anterior:</strong> HTML solo mostraba texto, enlaces e imágenes estáticas, y para ver algo más se necesitaban plugins que había que instalar, gastaban recursos y tenían fallas de seguridad.</p>
+ 	 <p><strong>Cambio:</strong> Canvas permitió dibujar gráficos 2D con JavaScript, y WebGL llevó la renderización 3D al navegador aprovechando la GPU.</p>
+ 	 <p><strong>Impacto:</strong> Se pueden mostrar juegos, mapas interactivos, realidad virtual y aplicaciones CAD sin instalar nada.</p>
+  	<p><strong>Ejemplo actual:</strong> El sitio Contra, creado con WebGL.</p>
+</div>
+
+  <div class="carrusel-controles">
+    <button type="button" id="btn-anterior" aria-label="Diapositiva anterior">‹ Anterior</button>
+    <span id="contador" aria-live="polite">1 / 5</span>
+    <button type="button" id="btn-siguiente" aria-label="Diapositiva siguiente">Siguiente ›</button>
+  </div>
+</div>
+</section>
+	<section id="aplicacion">
+		<h2>Una aplicación real</h2>
+  		<p>En la primera parte abordamos lo sorprendentes que pueden ser los sitios web enriquecidos con color, animación y alta resolución. Ahora analizaremos otras aplicaciones que han surgido gracias a la evolución de la graficación por computadora, como es el caso de Google Maps.</p>
+
+		<p>Esta herramienta permite trazar rutas optimizadas para usuarios que necesitan desplazarse de manera eficiente. Antes de su aparición, las personas tomaban decisiones basadas únicamente en las zonas que ya conocían, ignorando la distancia exacta a recorrer y, en consecuencia, el tiempo estimado de traslado.</p>
+
+  <figure>
+    <img src="img/AplicacionReal.png" width="800" height="500" alt="Trazo de lo que realiza Google Maps para indicar una ruta. Elaboración propia">
+    <figcaption>Fig. 6. Ruta que toma Google Maps para generar un trayecto. (Elaboración propia).</figcaption>
+  </figure>
+</section>
+<section id="laboratorio">
+	<h2>Laboratorio de color</h2>
+<article>
+	<h3>Experimento 1: Canales RGB con valores idénticos</h3>
+	<figure>
+      <img src="img/EX1.png" width="825" height="456" alt="Cuadro de color gris obtenido con los tres canales en el mismo valor">
+      <figcaption>Fig. 7. Color obtenido con RGB en Academia.emcode.</figcaption>
+    </figure>
+	<div class="exp-texto">
+		<p><strong>Predicción:</strong> Predije que al coincidir los tres canales (Rojo, Verde y Azul), el resultado se comportaría como una mezcla sustractiva de pinturas, generando un tono marrón oscuro o tierra neutro desaturado.</p>
+		<p><strong>Datos:</strong> Se observan en la imagen.</p>
+		<p><strong>Conclusión basada en valores:</strong> Mi predicción fue errónea, porque asumí que los colores se mezclarían como pigmentos. En la síntesis aditiva de una pantalla, cuando los tres canales valen lo mismo, el máximo y el mínimo coinciden y delta es igual a 0, por lo que la saturación cae automáticamente al 0%. Esto me demostró que cualquier combinación de canales con valores idénticos genera un gris puro, cuya claridad depende del valor asignado.</p>
+	</div>
+</article>
+<article>
+	<h3>Experimento 2: Desplazamiento hacia valores iguales de Verde y Azul</h3>
+	<figure>
+      <img src="img/EX2.png" width="827" height="472" alt="Cuadro de color rojo oscuro obtenido con valores específcos en los canales">
+      <figcaption>Fig. 8. Color obtenido con RGB en Academia.emcode.</figcaption>
+    </figure>
+ <div class="exp-texto">
+	<p><strong>Predicción:</strong> Mi predicción fue que, al desplazar los valores desde un rojo oscuro puro hacia una combinación con valores iguales en verde y azul, el color se neutralizaría, obteniendo un rojo más "opaco".</p>
+	<p><strong>Datos:</strong></p>
+	<ul>
+     		<li>RGB: (128, 64, 64)</li>
+      		<li>CMY: (49.8%, 74.9%, 74.9%)</li>
+      		<li>HSV: (0°, 50%, 50.2%)</li>
+      		<li>HSL: (0°, 33.3%, 37.6%)</li>
+     		<li>Máximo: 128</li>
+     	 	<li>Mínimo: 64</li>
+      		<li>Delta: 64</li>
+  	  </ul>
+	<p><strong>Conclusión basada en valores:</strong> Comprobé que mi predicción fue correcta. Al permanecer el canal rojo como el valor máximo 128, el matiz se mantuvo en H = 0. Sin embargo, al igualar los canales verde y azul a 64, la diferencia entre canales Delta disminuyó a 64, provocando que la Saturación cayera al 50% en HSV (y al 33.3\% en HSL). Con esto confirmé que a menor distancia entre los canales, un valor menor de Delta, el color pierde pureza y se desplaza hacia el centro grisáceo.</p>
+	</div>
+</article>
+<article>
+	<h3>Experimento 3: Evaluación de la combinación RGB (64, 128, 192)</h3>
+	<figure>
+      <img src="img/EX3.png" width="400" height="250" alt="Cuadro de color azul obtenido con lRGB (64, 128, 192)">
+      <figcaption>Fig. 9. Color obtenido con RGB en Academia.emcode.</figcaption>
+    </figure>
+ <div class="exp-texto">	
+	<p><strong>Predicción:</strong> Mi intuición me decía que obtendría un color predominantemente azul debido al valor más alto en ese canal (192) con un tono verdoso o aguamarina aportado por el verde (128), mientras que el rojo (64) lo acercaría a un tono ligeramente más cálido.</p>
+	<p><strong>Datos:</strong> Se observan en la imagen.</p>
+	<p><strong>Conclusión basada en valores:</strong> Comprobé que mi intuición fue acertada. Al considerar el valor máximo de (192) en el canal azul y una Delta de 128, observé que el matiz se ubicó en los 210°, dando un tono de azul cian.</p>
+</div>
+</article>
+<p> Analizar estos datos me ayudó a entender que tanto el modelo HSV como el HSL describen exactamente el mismo color físico en la pantalla, pero lo representan mediante geometrías y conceptos de "brillo" totalmente distintos. Antes pensaba que, de alguna forma HSL y HSV describían exactamente lo mismo, el brillo de una pantalla, por lo que tendrían porcentajes bastantes cercanos, pero al analizar las muestras, pude observar que los conceptos que manejan son diferentes, ya que el Valor y la Luminosidad variaron en mas de 10%. </p>
+<p> Puedo decir ahora que comprendo que ambos modelos procesan los extremos de los canales de color de forma distinta, HSV sitúa el color en un punto medio equilibrado, mientras que HSV mide el brillo de forma lineal respecto a la oscuridad absoluta. </p>
+</section>
+      <section id="algoritmo">
+	<h2>De la fórmula al algoritmo</h2>
+	<h3>¿Te imaginas calcular los propios valores de HSV? En la siguiente imagen te muestro los pasos y algunos ejemplos para que no te pierdas, mismos que son los colores con los predije algunos datos sin verlos en la pantalla.</h3>
+<figure>
+      <img src="img/EjerRGB.png" width="2000" height="1200" alt="Fórmulas para convertir de RGB a HSV.">
+      <figcaption>Fig. 10. Fórmulas para convertir de RGG a HSV. Elaboración propia.</figcaption>
+    </figure>
+<h3>Ahora veamos un código para calcularlo...</h3>
+
+<pre><code>// Convierte un color RGB (cada canal de 0 a 255) a HSV y devuelve un texto con el formato "H°, S%, V%".
+function convertRGBtoHSV(r, g, b) {
+  //Normalizar: llevar cada canal al rango de 0 a 1
+  const rPrima = r / 255;
+  const gPrima = g / 255;
+  const bPrima = b / 255;
+
+  //Obtener el canal con el valor mayor y el de menor valor
+  const max = Math.max(rPrima, gPrima, bPrima);
+  const min = Math.min(rPrima, gPrima, bPrima);
+
+  //Delta diferencia entre el mayor y el menor (si vale 0, los tres canales son iguales y el color es un gris)
+  const delta = max - min;
+
+  let h = 0;
+  let s = 0;
+  let v = max * 100; // V = el canal más alto, expresado en porcentaje
+
+  //Saturación(S) es Delta entre el máximo, en porcentaje, solamente si max>0.
+  if (max !== 0) {
+    s = (delta / max) * 100;
+  }
+
+  //Tono (H) solo se calcula si hay diferencia entre los canales
+  if (delta !== 0) {
+    if (max === rPrima) {
+      h = 60 * (((gPrima - bPrima) / delta) % 6);
+    } else if (max === gPrima) {
+      h = 60 * (((bPrima - rPrima) / delta) + 2);
+    } else if (max === bPrima) {
+      h = 60 * (((rPrima - gPrima) / delta) + 4);
+    }
+
+    //Si el ángulo salió negativo, se suman 360 para dejarlo entre 0 y 360
+    if (h &lt; 0) {
+      h += 360;
+    }
+    //Si el ángulo es 360 se lleva a 0
+    if (h >= 360) {
+      h = 0;
+}
+  }
+
+  // Devolver el resultado con sus símbolos
+  return [
+    Number(h.toFixed(1)),
+    Number(s.toFixed(1)),
+    Number(v.toFixed(1))
+  ];
+}
+</code></pre></section>
+      <section id="glosario">
+<section id="glosario">
+  <h2>Glosario</h2>
+  <p>¿Tienes duda en alguna de estas palabras? Yo también las tuve, veamos qué te puedo explicar de ellas...</p>
+  <div class="glosario">
+    <ul class="glosario-lista">
+      <li><button type="button" class="glosario-btn activo" data-panel="g-gui" aria-pressed="true">GUI</button></li>
+      <li><button type="button" class="glosario-btn" data-panel="g-ordtransis" aria-pressed="false">Ordenador Transistorizado</button></li>
+      <li><button type="button" class="glosario-btn" data-panel="g-cad" aria-pressed="false">CAD</button></li>
+      <li><button type="button" class="glosario-btn" data-panel="g-tecrasterizadas" aria-pressed="false">Tecnologías Rasterizadas</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-coprocesador" aria-pressed="false">Coprocesador matemático</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-nucleos" aria-pressed="false">Núcleos CUDA (Compute Unified Device Architecture)</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-hsl" aria-pressed="false">HSL (Hue, Saturation, Lightness / Matiz, Saturación, Luminosidad)</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-hsv" aria-pressed="false">HSV (Hue, Saturation, Value / Matiz, Saturación, Valor)</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-sage" aria-pressed="false">SAGE (Semi-Automatic Ground Environment)</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-crt" aria-pressed="false">CRT (Cathode-Ray Tube / Tubo de Rayos Catódicos)</button></li>
+	<li><button type="button" class="glosario-btn" data-panel="g-html" aria-pressed="false">HTML (HyperText Markup Language)</button></li>
+    </ul>
+    <div class="glosario-paneles">
+      <article class="glosario-panel" id="g-gui">
+        <h3>GUI(Graphic User Interface / Interfaz Gráfica de Usuario)</h3>
+        <p><strong>Definición:</strong> Es lo que nos salvó de tener que usar la computadora escribiendo comandos aburridos en una pantalla negra. Son los botones, ventanas, íconos y menús que puedes clickear.</p>
+        <p><strong>Ejemplo:</strong> La barra de tareas y el botón de inicio, así como el elemento de vídeo  introducidos en Windows 95.</p>
+        <figure>
+          <img src="img/gui.png" width="760" height="520" alt="Escritorio de Windows 95">
+          <figcaption>Fig. 11. Escritorio de Windows 95. (Fundació per a la Universitat Oberta de Catalunya, s.f.).</figcaption>
+        </figure>
+      </article>
+      <article class="glosario-panel" id="g-ordtransis" hidden>
+        <h3>Ordenador Transistorizado</h3>
+        <p><strong>Definición:</strong> Las computadoras viejas usaban tubos de vacío gigantes que se calentaban como planchas. Los transistores llegaron para reemplazarlos, haciendo que las computadoras pasaran del tamaño de una casa al de un refrigerador, consumiendo menos energía y siendo mucho más rápidas.</p>
+        <p><strong>Ejemplo:</strong> Una pantalla de los años 60 mostrando vectores ultra simples: líneas verdes parpadeantes sobre un fondo negro formando un radar.</p>
+        <figure>
+          <img src="img/transis.png" width="960" height="542" alt="Imagen de un monitor transistorizado">
+          <figcaption>Fig. 12. Pantalla de 1960, funcionaban con la misma tecnología que los monitores para ordenadores. (Sin Autor, s.f.) </figcaption>
+        </figure>
+      </article>
+      <article class="glosario-panel" id="g-cad" hidden>
+        <h3>CAD (Computer-Aided Design / Diseño Asistido por Computadora)</h3>
+        <p><strong>Definición:</strong> El software definitivo para ingenieros y arquitectos. Es el reemplazo digital de la mesa de dibujo, las reglas y los lápices mecánicos para diseñar desde un tornillo hasta un rascacielos.</p>
+        <p><strong>Ejemplo:</strong> Un plano en 3D de una pieza mecánica o una casa, donde puedes ver líneas de eje fijas, cotas con medidas exactas y girar el objeto para verlo desde cualquier perspectiva.</p>
+        <figure>
+          <img src="img/cad.png" width="1172" height="660" alt="Plano en AutoCAD">
+          <figcaption>Fig. 13. Plano realizado en AutoCAD de AUTODESK. (AUTODESK, 2025).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-tecrasterizadas" hidden>
+        <h3>Tecnologías rasterizadas</h3>
+        <p><strong>Definición:</strong> Es la forma en que nuestra pantalla muestra casi todo hoy en día, usando una rejilla gigante de cuadritos (píxeles). Si haces un zoom extremo a una foto rasterizada, verás que la imagen se "pixelea" porque está hecha de bloques de color fijos.</p>
+        <p><strong>Ejemplo:</strong> Un lienzo digital de 800x600 píxeles donde pintar una línea diagonal se traduce en colorear una escalera de cuadritos negros uno al lado del otro.</p>
+        <figure>
+          <img src="img/raster.png" width="500" height="250" alt="Imagen rasterizada de una bombilla.">
+          <figcaption>Fig. 14. Bombilla de cerca, observando la tecnología rasterizada (Asako, 2024).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-coprocesador" hidden>
+        <h3>Coprocesador matemático</h3>
+        <p><strong>Definición:</strong> Un chip asistente que se usaba antiguamente. El procesador principal (CPU) era bueno para tareas generales, pero malo para matemáticas pesadas (como decimales o trigonometría). Este chip se encargaba exclusivamente de esos cálculos para no ralentizar el sistema.</p>
+        <p><strong>Ejemplo:</strong> Renderizar una figura en 3D mucho más rápido. En lugar de ver cómo la pantalla dibuja línea por línea de un polígono cada 5 segundos, el coprocesador calculaba los puntos flotantes al instante para mostrar la figura completa de golpe.</p>
+        <figure>
+          <img src="img/coprocesador.png" width="820" height="458" alt="Intel i486 coprocesador matemático.">
+          <figcaption>Fig. 15. Procesador Intel i486 SX, arquitectura x86 emblemática en la transición hacia la integración de coprocesadores matemáticos. (Carrasco, 2014).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-nucleos" hidden>
+        <h3>NÚCLEOS CUDA (Compute Unified Device Architecture)</h3>
+        <p><strong>Definición:</strong> Son miles de miniprocesadores que tienen las tarjetas gráficas de NVIDIA. En lugar de tener 4 o 8 núcleos potentes como tu CPU, una GPU tiene miles de núcleos CUDA especializados en hacer tareas matemáticas pequeñas y repetitivas todas al mismo tiempo (en paralelo).</p>
+        <p><strong>Ejemplo:</strong> Calcular la iluminación, las sombras y los reflejos del agua en un videojuego de última generación en tiempo real, procesando millones de píxeles simultáneamente a 60 cuadros por segundo.</p>
+        <figure>
+          <img src="img/cuda.png" width="820" height="458" alt="Procesador gráfico NVIDIA exponiendo chip de silicio.">
+          <figcaption>Fig. 16. Procesador gráfico (GPU) de NVIDIA exponiendo el chip de silicio que alberga los miles de núcleos CUDA encargados del procesamiento paralelo masivo. (CORSAIR, 2025).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-hsl" hidden>
+        <h3>HSL (Hue, Saturation, Lightness / Matiz, Saturación, Luminosidad)</h3>
+        <p><strong>Definición:</strong> Un modelo para entender el color de forma humana. En lugar de mezclar Rojo, Verde y Azul, eliges el color base (Matiz en grados), qué tan vivo está (Saturación) y qué tanta luz tiene (Lightness, donde el 100% de luz siempre te dará blanco puro).</p>
+        <p><strong>Ejemplo:</strong> Un doble cono o cilindro tridimensional de color donde el eje vertical va desde el negro absoluto abajo, pasa por los colores vivos en el centro, y termina en blanco puro arriba.</p>
+        <figure>
+          <img src="img/hsl.png" width="820" height="458" alt="Representación tridimensional cilíndrica del modelo HSL">
+          <figcaption>Fig. 17. Representación tridimensional cilíndrica del modelo HSL, ilustrando la distribución espacial del Matiz (Hue), la Saturación (Saturation) y la Luminosidad (Lightness). (Wikipedia, 2026).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-hsv" hidden>
+        <h3>HSV (Hue, Saturation, Value / Matiz, Saturación, Valor)</h3>
+        <p><strong>Definición:</strong> Muy hermano del HSL, pero con una diferencia clave en el brillo (Valor). Aquí, el 100% de Valor no significa blanco, sino el color en su máxima brillantez. Para llegar al blanco en HSV, tienes que bajar la saturación a 0%.</p>
+        <p><strong>Ejemplo:</strong> Un cono invertido de color. La punta inferior es el negro absoluto, la base superior redonda muestra el círculo cromático con los colores más brillantes posibles, y el centro exacto de esa base superior es el color blanco.</p>
+        <figure>
+          <img src="img/hsv.png" width="820" height="458" alt="Representación tridimensional del espacio de color HSV">
+          <figcaption>Fig. 18. Representación tridimensional del espacio de color HSV, que organiza geométricamente el Matiz (Hue), la Saturación (Saturation) y el Valor o brillo (Value). (Wikipedia, 2026).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-sage" hidden>
+        <h3>SAGE (Semi-Automatic Ground Environment)</h3>
+        <p><strong>Definición:</strong> Un sistema de defensa militar gigante de la Guerra Fría (años 50). Fue uno de los pioneros en computación gráfica: conectaba radares de todo Estados Unidos para detectar aviones enemigos en tiempo real.</p>
+        <p><strong>Ejemplo:</strong> Una pantalla redonda que mostraba mapas del espacio aéreo simplificados con líneas, texto y puntos parpadeantes que indicaban la posición de las aeronaves.</p>
+        <figure>
+          <img src="img/sage.png" width="820" height="458" alt="Operador del sistema militar SAGE interactuando con la pantalla vectorial.">
+          <figcaption>Fig. 19. Operador del sistema militar SAGE interactuando con la pantalla vectorial mediante un lápiz óptico, pionero en la historia de la graficación interactiva. (Computer History Museum, 1959).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-crt" hidden>
+        <h3>CRT (Cathode-Ray Tube / Tubo de Rayos Catódicos)</h3>
+        <p><strong>Definición:</strong> La tecnología de las televisiones y monitores antiguos. Usaba un cañón en el fondo que disparaba electrones contra una pantalla de vidrio interna cubierta de fósforo para hacerla brillar y formar la imagen.</p>
+        <p><strong>Ejemplo:</strong> Una imagen con una ligera curvatura en los bordes, un sutil parpadeo (refresh rate) y líneas horizontales de barrido muy finas (scanlines) visibles si te acercabas mucho al monitor.</p>
+        <figure>
+          <img src="img/crt.png" width="820" height="458" alt="Monitor CRT ViewSonic de la serie Graphics">
+          <figcaption>Fig. 20. Monitor CRT ViewSonic de la serie Graphics, ejemplo representativo de la tecnología de tubo de rayos catódicos utilizada en pantallas clásicas. (Pickle, 2022).</figcaption>
+        </figure>
+      </article>
+<article class="glosario-panel" id="g-html" hidden>
+        <h3>HTML (HyperText Markup Language)</h3>
+        <p><strong>Definición:</strong> El esqueleto de internet. No es un lenguaje de programación, sino un lenguaje de etiquetas que le dice al navegador web: "aquí va un título, aquí va un párrafo y aquí va una imagen".</p>
+        <p><strong>Ejemplo:</strong> Una página web básica como esta, donde tuve que repasar algunos conceptos básicos de HTML y apoyarme de la poderosísima IA, por lo que no necesitamos imagen de referencia:).</p>
+        </article>
+   		 </div>
+ 	 </div>
+	</section>
+<section id="conclusion">
+  <h2>Conclusión</h2>
+
+  <p>Antes pensaba que la Graficación por computadora consistía solo en mostrar imágenes en una pantalla y que los colores digitales se mezclaban igual que la pintura. La evidencia que reuní en este museo, y a través de esta unidad, cambió mi idea porque descubrí que detrás de cada imagen hay décadas de limitaciones técnicas que se fueron resolviendo una tras otra, y que el color en una pantalla se rige por números y reglas matemáticas muy precisas.</p>
+
+  <p>Al recorrer los cinco momentos de la evolución, entendí que cada avance nació de un problema del anterior. Los monitores CRT y el sistema SAGE permitieron ver datos como imágenes, pero eran estáticas y de pocos trazos. El Sketchpad de Ivan Sutherland hizo posible dibujar de forma interactiva y dio origen al diseño asistido por computadora (CAD). Los gráficos vectoriales, nítidos al escalar, no lograban degradados ni texturas, y por eso llegaron los gráficos rasterizados. Las exigencias de los programas CAD y de los videojuegos llevaron a la creación de la GPU con sus miles de núcleos. Finalmente, Canvas y WebGL llevaron los gráficos al navegador sin necesidad de plugins. Todo esto lo pude ver aplicado en una aplicación real, Google Maps, que transforma datos en una representación visual que el usuario puede interpretar para tomar decisiones y quedé sorprendida por las grandes cosas que se pueden logar con tanta evolución..</p>
+
+  <p>En el laboratorio de color comprobé que mis intuiciones no siempre eran correctas. Cuando los tres canales RGB tienen el mismo valor, el resultado no es un marrón como yo esperaba, sino un gris, porque delta vale 0 y la saturación cae al 0%. Con RGB (128, 64, 64) vi cómo un rojo pierde pureza cuando sus canales se acercan. También noté que HSV y HSL no describen el brillo de la misma forma, ya que el Valor y la Luminosidad de mis muestras variaron en más de 10 puntos porcentuales. Esos mismos conceptos (normalización, máximo, mínimo y delta) los llevé a un algoritmo que convierte un color de RGB a HSV, y eso me mostró que la teoría del color puede traducirse directamente en código. En resumen la Graficación por computadora es la unión de hardware, matemáticas y software.</p>
+
+</section>
+      <section id="fuentes">
+  <h2>Fuentes y créditos</h2>
+  <ol>
+    <li>Academia.emcode. (s. f.). <em>Reconstruye el Núcleo Cromático</em>. https://academia.emcode.tech/materias/graficacion/mission-1?classId=22705f6d-9981-4038-9522-4d629c2a3773. Recuperado el 28 de septiembre de 2026.</li>
+    <li>Asako. (2024). <em>Mastering Raster and Vector Graphics: A Guide to Effective Usage</em>. Pearly Arts. <a href="https://pearlyarts.com/raster-and-vector-graphics-what-is-the-difference/" target="_blank" rel="noopener">https://pearlyarts.com/raster-and-vector-graphics-what-is-the-difference/</a>. Recuperado el 1 de octubre de 2026.</li>
+    <li>AUTODESK. (2025). <em>Software CAD para diseñadores, dibujantes y creadores</em>. <a href="https://www.autodesk.com/mx/solutions/cad-software" target="_blank" rel="noopener">https://www.autodesk.com/mx/solutions/cad-software</a>. Recuperado el 1 de octubre de 2026.</li>
+    <li>Carrasco, A. (2014). <em>Emulador de coprocesador matemático en 486-SX</em>. Momentos en Blog. <a href="https://antoniortizcarrasco.blogspot.com/2014/10/emulador-de-coprocesador-matematico-en.html" target="_blank" rel="noopener">https://antoniortizcarrasco.blogspot.com/2014/10/emulador-de-coprocesador-matematico-en.html</a>. Recuperado el 3 de octubre de 2026.</li>
+    <li>Computer History Museum. (1959). <em>SAGE (Semi Automatic Ground Environment)</em>. <a href="https://www.computerhistory.org/revolution/networking/19/399/2161" target="_blank" rel="noopener">https://www.computerhistory.org/revolution/networking/19/399/2161</a>. Recuperado el 29 de septiembre de 2026.</li>
+    <li>CORSAIR. (2025). <em>¿Qué es un núcleo CUDA y cómo funciona?</em> CORSAIR EXPLORER. <a href="https://www.corsair.com/es/es/explorer/gamer/gaming-pcs/what-is-a-cuda-core-and-how-do-they-work/" target="_blank" rel="noopener">https://www.corsair.com/es/es/explorer/gamer/gaming-pcs/what-is-a-cuda-core-and-how-do-they-work/</a>. Recuperado el 3 de octubre de 2026.</li>
+    <li>Espeso, P. (2014). <em>Las GPU como pasado, presente y futuro de la computación</em>. Xataka. <a href="https://www.xataka.com/componentes/las-gpu-como-pasado-presente-y-futuro-de-la-computacion" target="_blank" rel="noopener">https://www.xataka.com/componentes/las-gpu-como-pasado-presente-y-futuro-de-la-computacion</a>. Recuperado el 14 de septiembre de 2026.</li>
+    <li>Fundació per a la Universitat Oberta de Catalunya. (s. f.). <em>Graphical user interface (GUI)</em>. Universitat Oberta de Catalunya. <a href="https://design-toolkit.recursos.uoc.edu/es/graphical-user-interface/" target="_blank" rel="noopener">https://design-toolkit.recursos.uoc.edu/es/graphical-user-interface/</a>. Recuperado el 29 de septiembre de 2026.</li>
+    <li>Grace Hopper Academy. (2016). <em>WebGL and Canvas Tutorial - How to Use Canvas and WebGL to Draw in a Web Application</em> [Vídeo]. YouTube. <a href="https://www.youtube.com/watch?v=Ot_d2DpEskQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Ot_d2DpEskQ</a>. Recuperado el 16 de septiembre de 2026.</li>
+    <li>Hoffman, C. (2014). <em>Why Browser Plug-Ins Are Going Away and What’s Replacing Them</em>. How-To Geek. <a href="https://www.howtogeek.com/179213/why-browser-plug-ins-are-going-away-and-whats-replacing-them/" target="_blank" rel="noopener">https://www.howtogeek.com/179213/why-browser-plug-ins-are-going-away-and-whats-replacing-them/</a>. Recuperado el 16 de septiembre de 2026.</li>
+    <li>Montana, A. (2022). <em>Conoce la diferencia entre imágenes vectoriales y rasterizadas así como sus principales usos</em>. G-Tech Design | Estudio de Diseño Online. <a href="https://gtechdesign.net/es/blog/diferencia-entre-imagenes-vectoriales-y-rasterizadas-y-usos" target="_blank" rel="noopener">https://gtechdesign.net/es/blog/diferencia-entre-imagenes-vectoriales-y-rasterizadas-y-usos</a>. Recuperado el 15 de septiembre de 2026.</li>
+    <li>NVIDIA. (2026). <em>Tarjetas gráficas NVIDIA GeForce RTX 5090</em>. <a href="https://www.nvidia.com/es-es/geforce/graphics-cards/50-series/rtx-5090/" target="_blank" rel="noopener">https://www.nvidia.com/es-es/geforce/graphics-cards/50-series/rtx-5090/</a>. Recuperado el 20 de septiembre de 2026.</li>
+    <li>Pickle, B. (2022). <em>CRT</em>. TechTerms.com. <a href="https://techterms.com/es/definition/crt" target="_blank" rel="noopener">https://techterms.com/es/definition/crt</a>. Recuperado el 5 de octubre de 2026.</li>
+    <li>Support Google. (2026). <em>Cómo obtener instrucciones sobre cómo llegar a un lugar y mostrar las rutas en Google Maps - Computadora - Ayuda de Google Maps</em>. Ayuda de Google Maps. <a href="https://support.google.com/maps/answer/144339?hl=Es-419" target="_blank" rel="noopener">https://support.google.com/maps/answer/144339?hl=Es-419</a>. Recuperado el 18 de septiembre de 2026.</li>
+    <li>Unseen Studio. (2024). <em>Contra Project Calculator - AwWwards SOTD</em>. <a href="https://www.awwwards.com/sites/contra-project-calculator" target="_blank" rel="noopener">https://www.awwwards.com/sites/contra-project-calculator</a>. Recuperado el 21 de septiembre de 2026.</li>
+    <li>Villagrán, I. (2021). <em>Vista de Retrospectiva de los primeros sistemas de gráficos por ordenador</em>. Revistas UMA. <a href="https://revistas.uma.es/index.php/idiseno/es/article/view/2407/2215" target="_blank" rel="noopener">https://revistas.uma.es/index.php/idiseno/es/article/view/2407/2215</a>. Recuperado el 14 de septiembre de 2026.</li>
+    <li>Wikipedia. (2026). <em>HSL y HSV</em>. Wikipedia, la Enciclopedia Libre. <a href="https://es.wikipedia.org/wiki/HSL_y_HSV" target="_blank" rel="noopener">https://es.wikipedia.org/wiki/HSL_y_HSV</a>. Recuperado el 27 de septiembre de 2026.</li>
+  </ol>
+</section>
     </main>
-    <footer><p>PENDIENTE: nombre y grupo.</p></footer>
+    <footer><p>Yamila Ruiz Nava. Graficación 9 A.M.</p></footer>
+<dialog id="visor" aria-label="Imagen ampliada">
+  <button type="button" id="visor-cerrar" aria-label="Cerrar imagen">×</button>
+  <img id="visor-img" alt="">
+  <p id="visor-pie"></p>
+</dialog>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".carrusel .slide");
+    const contador = document.getElementById("contador");
+    const btnAnterior = document.getElementById("btn-anterior");
+    const btnSiguiente = document.getElementById("btn-siguiente");
+    let actual = 0;
+
+    function mostrar(i) {
+      actual = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => (s.hidden = n !== actual));
+      if (contador) contador.textContent = `${actual + 1} / ${slides.length}`;
+    }
+
+    if (slides.length && btnAnterior && btnSiguiente) {
+      btnAnterior.addEventListener("click", () => mostrar(actual - 1));
+      btnSiguiente.addEventListener("click", () => mostrar(actual + 1));
+      mostrar(0);
+    }
+
+    const botones = document.querySelectorAll(".glosario-btn");
+    const paneles = document.querySelectorAll(".glosario-panel");
+
+    botones.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        botones.forEach((b) => {
+          b.classList.remove("activo");
+          b.setAttribute("aria-pressed", "false");
+        });
+        paneles.forEach((p) => (p.hidden = true));
+
+        btn.classList.add("activo");
+        btn.setAttribute("aria-pressed", "true");
+	const panel = document.getElementById(btn.dataset.panel);
+        if (panel) panel.hidden = false;
+      });
+    });
+
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const visorPie = document.getElementById("visor-pie");
+
+    if (visor && visorImg && visorPie && typeof visor.showModal === "function") {
+      const abrir = (img) => {
+        visorImg.src = img.currentSrc || img.src; // la misma imagen, ampliada
+        visorImg.alt = img.alt;
+        const pie = img.closest("figure")?.querySelector("figcaption");
+        visorPie.textContent = pie ? pie.textContent : "";
+        visor.showModal();
+      };
+
+      document.querySelectorAll("figure img").forEach((img) => {
+        img.tabIndex = 0; // se puede enfocar con Tab
+        img.setAttribute("role", "button");
+        img.setAttribute("aria-label", "Ampliar imagen: " + img.alt);
+        img.addEventListener("click", () => abrir(img));
+        img.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            abrir(img);
+          }
+        });
+      });
+      const btnCerrar = document.getElementById("visor-cerrar");
+      if (btnCerrar) btnCerrar.addEventListener("click", () => visor.close());
+      visor.addEventListener("click", (e) => {
+        if (e.target === visor) visor.close();
+      });
+    }
+  });
+</script>
   </body>
 </html>
